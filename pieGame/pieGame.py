@@ -47,29 +47,29 @@ while True:
 
     #should the pieces be drawn
     if piece1:
-        color = 0,0,0
+        # color =  255,255,0
         start_angle = math.radians(0)
         end_angle = math.radians(90)
         pygame.draw.arc(screen,color,position,start_angle,end_angle,width)
-        pygame.draw.arc(screen,color,(x,y),(x,y-radius),width)
+        pygame.draw.line(screen,color,(x,y),(x,y-radius),width)
         pygame.draw.line(screen,color,(x,y),(x+radius,y),width)
     if piece2:
         start_angle = math.radians(90)
         end_angle = math.radians(180)
         pygame.draw.arc(screen,color,position,start_angle,end_angle,width)
-        pygame.draw.arc(screen,color,(x,y),(x,y-radius),width)
+        pygame.draw.line(screen,color,(x,y),(x,y-radius),width)
         pygame.draw.line(screen,color,(x,y),(x-radius,y),width)
     if piece3:
         start_angle = math.radians(180)
         end_angle = math.radians(270)
         pygame.draw.arc(screen,color,position,start_angle,end_angle,width)
-        pygame.draw.arc(screen,color,(x,y),(x-radius,y),width)
+        pygame.draw.line(screen,color,(x,y),(x-radius,y),width)
         pygame.draw.line(screen,color,(x,y),(x,y+radius),width)
     if piece4:
         start_angle = math.radians(270)
         end_angle = math.radians(360)
         pygame.draw.arc(screen,color,position,start_angle,end_angle,width)
-        pygame.draw.arc(screen,color,(x,y),(x,y+radius),width)
+        pygame.draw.line(screen,color,(x,y),(x,y+radius),width)
         pygame.draw.line(screen,color,(x,y),(x+radius,y),width)
 
     if piece1 and piece2 and piece3 and piece4 :

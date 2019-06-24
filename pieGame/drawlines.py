@@ -1,10 +1,11 @@
-import pygame,sys,math
+import pygame,sys,math,random
 
 pygame.init()
 screen = pygame.display.set_mode((600,500))
 
 pygame.display.set_caption("drawing Lines")
 
+print(  )
 while True:
     for event in pygame.event.get():
         if event.type in (pygame.QUIT,pygame.KEYDOWN):
@@ -18,6 +19,7 @@ while True:
     start_angle = math.radians(0)
     end_angle = math.radians(180)
     width = 8
-    pygame.draw.line(screen,color,(100,100),(500,100),width)
+    for i in range(100):
+        pygame.draw.line(screen,color,(random.randint(1,600),random.randint(1,500)),(random.randint(1,600),random.randint(1,500)),width)
     pygame.draw.arc(screen,color,position,start_angle , end_angle ,width)
     pygame.display.update()
